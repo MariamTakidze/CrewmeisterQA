@@ -1,17 +1,6 @@
 /// <reference types = "Cypress"/>
 
-import loginpage from '../PageObjects/PageActions/LoginPg'
-
-// describe ('Login page', ()=>{
-//   beforeEach(()=>{
-//     cy.visit('https://app.crewmeister.com/sign-in')
-//   })
-//   it('passes', () => {
-//         loginpage.typeUsername('JoseBarronTest')
-//         loginpage.typePassword('1111')
-//         loginpage.clickLoginBtn()
-//       })
-// })
+import loginpage from '../PageObjects/PageActions/LoginPg';
 
 
 const performLogin = (username, password) => {

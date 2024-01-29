@@ -2,7 +2,6 @@
 describe('Login page', () => {
     beforeEach(() => {
         cy.visit('https://app.crewmeister.com/sign-in')
-        // cy.clearCookies()
         
         
     })
@@ -12,13 +11,8 @@ describe('Login page', () => {
     cy.get('input[name="password"]').type("Asd123")
     cy.get("#user-sign-in").click()
     cy.wait(5000)
-    
-    // cy.clock(now)
-    // cy.log(now)
-    // const currentDate = Cypress.moment().format('YYYY-MM-DD');
-    // cy.log(currentDate)
 
-         // Get the current date
+
     const currentDate = new Date();
 
     // Format the date as YYYY-MM-DD
@@ -44,14 +38,14 @@ describe('Login page', () => {
 
     //start work 
     cy.get('#page-time-tracking-start-work').click()
-    //wait for 2000 
+
     cy.wait(3000)
-    // cy.get('._cvv7vr6').should("contain", "You are clocked in")
+    
     cy.contains("You're clocked in").should('exist');
-    // cy.get('#page-time-tracking-table-header-column-4').click()
+
     cy.get('tbody tr').first().find("td").contains("running").should("exist")
     cy.wait(6000)
-    // cy.get('div[class = "_1b7g6azb"]').invoke("text").as("running")
+    
     
     //Clock out 
     cy.get('#page-time-tracking-stop-work').click()

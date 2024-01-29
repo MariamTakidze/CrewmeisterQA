@@ -6,7 +6,7 @@ class TrackingTimePg{
         cy.get('#page-time-tracking-start-work').click().invoke("text").as("clockInTime")
      }
      clockOut(){
-        cy.get('#page-time-tracking-stop-work').click().invoke("text").as("clockOutTime").log();
+        cy.get('#page-time-tracking-stop-work').click().invoke("text").as("clockOutTime");
      }
 
      checkClockedInMessage() {
